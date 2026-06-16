@@ -1,0 +1,16 @@
+MC_FUnIE_GAN/
+├── config.py                    # Configuration parameters
+├── data_loader.py               # Dataset loading & preprocessing
+├── metrics.py                   # PSNR, SSIM, UIQM, UICM, UISM, UIConM
+├── models/
+│   ├── __init__.py
+│   ├── generator.py             # FUnIE-GAN Generator with MSDC module
+│   └── discriminator.py         # PatchGAN Discriminator
+├── optimizers/
+│   ├── __init__.py
+│   └── hglo.py                  # Hybrid Gannet-Lion Optimization
+├── train.py                     # Main training script
+├── evaluate.py                  # Evaluation script
+├── utils.py                     # Utility functions
+├── requirements.txt             # Dependencies
+└── README.md                    # Instructions
