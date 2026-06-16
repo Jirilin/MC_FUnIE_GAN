@@ -1,7 +1,3 @@
-"""
-Data loader for UIEB and UTIEB datasets
-"""
-
 import os
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -11,19 +7,7 @@ import numpy as np
 import cv2
 
 class UnderwaterDataset(Dataset):
-    """
-    Underwater Image Enhancement Dataset
-    Expects folder structure:
-        dataset/
-            raw/
-                image1.jpg
-                image2.jpg
-                ...
-            ref/
-                image1.jpg
-                image2.jpg
-                ...
-    """
+    
     def __init__(self, root_dir, transform=None, img_size=256):
         self.root_dir = root_dir
         self.raw_dir = os.path.join(root_dir, 'raw')

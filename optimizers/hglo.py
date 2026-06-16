@@ -1,25 +1,12 @@
-"""
-Hybrid Gannet-Lion Optimization (HGLO) Algorithm
-"""
+# Hybrid Gannet-Lion Optimization (HGLO) Algorithm
 
 import numpy as np
 import random
 
 class HGLO:
-    """
-    Hybrid Gannet-Lion Optimization Algorithm
-    Combines GOA (exploration) and LOA (exploitation)
-    """
     def __init__(self, population_size=30, max_iter=150, dim=4, 
                  bounds=None, alpha=0.8, beta=0.6):
-        """
-        Args:
-            population_size: Number of candidate solutions
-            max_iter: Maximum iterations
-            dim: Dimension of search space
-            bounds: List of (min, max) tuples for each dimension
-            alpha, beta: LOA control parameters
-        """
+        
         self.population_size = population_size
         self.max_iter = max_iter
         self.dim = dim
@@ -70,10 +57,6 @@ class HGLO:
         return new_pos
     
     def _loa_update(self, position, group_best, global_best):
-        """
-        Lion Optimization Algorithm update
-        Exploitation phase
-        """
         # LOA territorial update
         new_pos = position + self.alpha * (group_best - position) + \
                   self.beta * (global_best - position)

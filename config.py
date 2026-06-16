@@ -1,7 +1,3 @@
-"""
-Configuration file for MC-FUnIE-GAN
-"""
-
 import torch
 
 class Config:
